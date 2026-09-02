@@ -9,6 +9,11 @@
 
 
 namespace esx::text {
+
+    // Gibt einen Vektor aus Teilstrings (Tokens) zurück
+    std::vector<std::string> split(const std::string& input, char delimiter);
+
+
     // Sucht ein Zeichen (als String übergeben) im Text und gibt den Index zurück.
     // Index beginnt bei 0. Falls nicht gefunden oder Such-String leer: -1.
     int findChar(const std::string& text, const std::string& ch);

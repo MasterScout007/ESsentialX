@@ -9,6 +9,27 @@
 
 
 namespace esx::text {
+    std::vector<std::string> split(const std::string& input, char delimiter) {
+        std::vector<std::string> tokens;
+        std::string currentToken = "";
+
+        for (char ch : input) {
+            if (ch == delimiter) {
+                tokens.push_back(currentToken);
+
+                currentToken = "";
+            } else {
+                currentToken += ch;
+            }
+        }
+
+        tokens.push_back(currentToken);
+
+        return tokens;
+    }
+
+
+
     // findChar: sucht erstes Vorkommen des ersten Zeichens von ch im text
     int findChar(const std::string& text, const std::string& ch) {
         if (ch.empty()) return -1;
