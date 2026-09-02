@@ -18,7 +18,8 @@ namespace esx::text {
                 tokens.push_back(currentToken);
 
                 currentToken = "";
-            } else {
+            }
+            else {
                 currentToken += ch;
             }
         }
@@ -27,7 +28,6 @@ namespace esx::text {
 
         return tokens;
     }
-
 
 
     // findChar: sucht erstes Vorkommen des ersten Zeichens von ch im text
