@@ -4,11 +4,11 @@ project(esx_consumerExample LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(ESX_CONFIG_DIR "C:/Users/sysadmin/CLionProjects/ESsentialX/cmake")
+# 1. ESsentialX aus dem Nachbarordner (~/ESsentialX) einbinden
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../ESsentialX" ESsentialX_build)
 
-message(STATUS "Using ESsentialX config from: ${ESX_CONFIG_DIR}")
-
-find_package(ESsentialX REQUIRED PATHS ${ESX_CONFIG_DIR} NO_DEFAULT_PATH)
-
+# 2. Executable erstellen
 add_executable(esx_consumerExample main.cpp)
+
+# 3. Verlinken (funktioniert jetzt sowohl mit ESsentialX::esx als auch mit ESsentialX)
 target_link_libraries(esx_consumerExample PRIVATE ESsentialX::esx)

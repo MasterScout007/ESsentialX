@@ -14,6 +14,9 @@ add_library(ESsentialX STATIC
         src/worldGen.cpp
 )
 
+# WICHTIG: Damit add_subdirectory mit ESsentialX::esx verlinken kann!
+add_library(ESsentialX::esx ALIAS ESsentialX)
+
 # Public include dir so consumers can do: #include <esx/file.hpp>
 target_include_directories(ESsentialX
         PUBLIC
