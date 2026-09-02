@@ -21,4 +21,4 @@ namespace esx::text {
 }
 
 
-#endif //ESSENTIALX_TEXT_HPP
+#endif

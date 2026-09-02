@@ -27,7 +27,7 @@ namespace esx::math {
     // Gibt den Durchschnitt eines Arrays zurück
     //int arrayAverage(std::span<const int> numbers); //average hasnt to be int
 
-    // Gibt den Durchschnitt eines Arrays zurück
+    // Gibt den Durchschnittswert eines Arrays zurück
     float arrayAverage(std::span<const float> numbers);
 
     //Gibt einen Wert innerhalb eines erlaubten Bereichs wieder
