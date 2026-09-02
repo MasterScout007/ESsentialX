@@ -3,12 +3,17 @@
 //
 
 #include <span>
+#include <string>
+#include <vector>
 
 #ifndef ESSENTIALX_MATH_HPP
 #define ESSENTIALX_MATH_HPP
 
 
 namespace esx::math {
+    // Wandelt einen Vektor aus Strings in einen Vektor aus Floats um
+    std::vector<float> convertToFloat(const std::vector<std::string>& inputTokens);
+
     // Gibt die Zahl positiv zurück
     int pos(int number);
 

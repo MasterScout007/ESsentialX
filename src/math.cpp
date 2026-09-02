@@ -9,6 +9,19 @@
 
 
 namespace esx::math {
+    // Neue Funktion für deine Library:
+    std::vector<float> convertToFloat(const std::vector<std::string>& inputTokens) {
+        std::vector<float> floatNumbers;
+
+        floatNumbers.reserve(inputTokens.size());
+
+        for (const std::string& token : inputTokens) {
+            floatNumbers.push_back(std::stof(token));
+        }
+
+        return floatNumbers;
+    }
+
     int pos(const int number) {
         return (number < 0) ? -number : number;
     }
